@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "kaumena"
+version = "0.1.0"
+description = "An toolkit for music source separation with pytorch"
+authors = ["jabkascript"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+torch = "2.6.0+cu126"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+
+testpaths = [
+    "tests",
+    "integration",
+]
