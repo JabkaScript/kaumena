@@ -18,7 +18,7 @@ from einops import rearrange
 from ._transformer import CrossTransformerEncoder # noqa
 from ._demucs import rescale_module
 from ._states import capture_init
-from utils.spectro import spectro, ispectro
+from ...utils.spectro import spectro, ispectro
 from ._hdemucs import pad1d, ScaledEmbedding, HEncLayer, MultiWrap, HDecLayer
 
 

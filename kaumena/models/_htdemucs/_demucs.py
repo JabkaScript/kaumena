@@ -10,7 +10,7 @@ from torch import nn
 import math
 import typing as tp
 from ._transformer import LayerScale # noqa
-from utils.transfrom import unfold
+from ...utils.transfrom import unfold
 
 
 def rescale_conv(conv, reference):

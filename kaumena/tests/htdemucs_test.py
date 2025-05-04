@@ -1,14 +1,13 @@
 import numpy as np
 import pytest
 import torch
-
-from models.htdemucs import HTDemucsModel
-from utils.testing import get_dummy_audio
+from ..models import HTDemucsModel
+from ..utils.testing import get_dummy_audio
 
 
 @pytest.fixture
 def model():
-    model = HTDemucsModel(["drums", "bass", "other", "vocals"], model_path="../weights/htdemucs/75fc33f5-1941ce65.th", has_klass_inside=True, device="cpu")
+    model = HTDemucsModel(["drums", "bass", "other", "vocals"], model_path="../../weights/htdemucs/75fc33f5-1941ce65.th", model_included_in_path=True, device="cuda")
     return model
 
 
@@ -49,7 +48,7 @@ def test_long_audio(model):
     waveform = get_dummy_audio(seconds=60, channels=2, sr=44100)
     result = model.separate(waveform)
     for source in result:
-        assert result[source].shape[-1] == 44100 * 60 * 2
+        assert result[source].shape[-1] == 44100 * 60
 
 def test_no_nan_in_output(model):
     waveform = get_dummy_audio(seconds=5, channels=2, sr=44100)

@@ -3,3 +3,7 @@
 __pycache__
 *.wav
 *.mp3
+.pytest_cache
+outputs
+weights
+dist

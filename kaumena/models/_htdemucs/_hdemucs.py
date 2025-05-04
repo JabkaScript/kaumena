@@ -17,7 +17,7 @@ from torch.nn import functional as F
 
 from ._demucs import DConv, rescale_module # noqa
 from ._states import capture_init # noqa
-from utils.spectro import spectro, ispectro
+from ...utils.spectro import spectro, ispectro
 
 
 def pad1d(x: torch.Tensor, paddings: tp.Tuple[int, int], mode: str = 'constant', value: float = 0.):

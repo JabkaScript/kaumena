@@ -1,0 +1,11 @@
+_target_: models.mdxnet.Mixer
+
+target_name: 'all'
+
+dim_t: 256
+hop_length: 1024
+overlap: 8192
+
+# optimizer
+lr: 0.003
+optimizer: rmsprop

@@ -1,0 +1,26 @@
+model_name: "mdxnet"
+sources:
+  - "vocals"
+  - "drums"
+  - "bass"
+  - "other"
+
+
+config_paths:
+  vocals: "conf/models/mdxnet/vocals.yaml"
+  drums: "conf/models/mdxnet/drums.yaml"
+  bass: "conf/models/mdxnet/bass.yaml"
+  other: "conf/models/mdxnet/other.yaml"
+  mixer: "conf/models/mdxnet/mixer.yaml"
+
+
+ckpt_paths:
+  vocals: "weights/mdxnet/vocals.ckpt"
+  drums: "weights/mdxnet/drums.ckpt"
+  bass: "weights/mdxnet/bass.ckpt"
+  other: "weights/mdxnet/other.ckpt"
+  mixer: "weights/mdxnet/mixer.ckpt"
+
+segment_length: 5
+sample_rate: 44100
+device: auto

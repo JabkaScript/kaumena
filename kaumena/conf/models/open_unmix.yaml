@@ -1,0 +1,9 @@
+model_name: "openunmix"
+device: "cuda"  # or "cpu"
+segment_length: 5
+sample_rate: 44100
+sources:
+  - "vocals"
+  - "drums"
+  - "bass"
+  - "other"
